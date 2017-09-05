@@ -15,46 +15,46 @@ Odd Environment should work on Sierra if you're installing it from a fresh state
 ## Installing
 1. Clone the repository
   ```shell
-  $ git clone https://github.com/oddhill/oddenvironment.git ${HOME}/oddenv
+  $ git clone https://github.com/neeth-zarget/zarget-dev.git ${HOME}/oddenv
   ```
 
 2. Copy auth.pp.default to auth.pp and enter auth credentials for Sendgrid.
   ```shell
-  $ cp ${HOME}/oddenv/manifests/auth.pp.default ${HOME}/oddenv/manifests/auth.pp
+  $ cp ${HOME}/zargetenv/manifests/auth.pp.default ${HOME}/zarget/manifests/auth.pp
   ```
 
 3. Run `setup.sh`
   ```shell
-  $ ${HOME}/oddenv/scripts/setup.sh
+  $ ${HOME}/zargetenv/scripts/setup.sh
   ```
 
 4. Add the following lines to your shell config file. (.profile or .bash_profile in your home folder)
   ```shell
-  export ODDENV_DIR="$HOME/oddenv"
-  source $ODDENV_DIR/scripts/env.sh
+  export ZARGETENV_DIR="$HOME/zargetenv"
+  source $ZARGETENV_DIR/scripts/env.sh
   ```
 
 5. Restart your shell and run `oddenv` in order to install everything
   ```shell
-  $ oddenv --force
+  $ zargetenv --force
   ```
 
 ## Keep up-to-date
 Run the following:
 ```shell
-$ oddenv
+$ zargetenv
 ```
 To pull the latest changes and apply them to your system.
 
 ## Services
 
 ```shell
-$ oddenv services list
-$ oddenv services mysql restart
-$ oddenv services apache stop
+$ zargetenv services list
+$ zargetenv services mysql restart
+$ zargetenv services apache stop
 ```
 
-`oddenv services` is just a wrapper around other commands.
+`zargetenv services` is just a wrapper around other commands.
 So `brew services` might be worth checking out. :)
 
 ```shell
