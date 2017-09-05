@@ -30,7 +30,7 @@ Zarget Environment should work on Sierra if you're installing it from a fresh st
 
 4. Add the following lines to your shell config file. (.profile or .bash_profile in your home folder)
   ```shell
-  export ZARGETENV_DIR="$HOME/zargetenv"
+  export ZARGETENV_DIR="$HOME/zargetdev"
   source $ZARGETENV_DIR/scripts/env.sh
   ```
 
