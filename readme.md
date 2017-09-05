@@ -20,7 +20,7 @@ Zarget Environment should work on Sierra if you're installing it from a fresh st
 
 2. Copy auth.pp.default to auth.pp and enter auth credentials for Sendgrid.
   ```shell
-  $ cp ${HOME}/zargetenv/manifests/auth.pp.default ${HOME}/zarget/manifests/auth.pp
+  $ cp ${HOME}/zargetenv/manifests/auth.pp.default ${HOME}/zargetenv/manifests/auth.pp
   ```
 
 3. Run `setup.sh`
