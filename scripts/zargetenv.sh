@@ -6,13 +6,13 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 if [[ "$1" = "services" ]]; then
-  node $ODDENV_DIR/scripts/services.js $2 $3
+  node $ZARGETENV_DIR/scripts/services.js $2 $3
   exit 0
 fi
 
-test -f "/etc/facter/facts.d/oddenv.txt" || echo oddenv_dir=$ODDENV_DIR | sudo tee -a /etc/facter/facts.d/oddenv.txt
+test -f "/etc/facter/facts.d/zargetenv.txt" || echo zargetenv_dir=$ZARGETENV_DIR | sudo tee -a /etc/facter/facts.d/zargetenv.txt
 
-cd $ODDENV_DIR
+cd $ZARGETENV_DIR
 ./scripts/satisfy.sh
 
 # Update function
@@ -42,7 +42,7 @@ latestTag=$(git describe --tags `git rev-list --tags --max-count=1`)
 currentBranch=$(git rev-parse --abbrev-ref HEAD)
 
 # If on master, checkout latest tag (version)
-# Probably the first time you run `oddenv`
+# Probably the first time you run `zargetenv`
 if [ $currentBranch = "master" ]; then
   update $latestTag
   exit 0
